@@ -5,6 +5,7 @@
 }
 body {
   overflow-x: hidden;
+  background-color: rgb(246, 246, 246);
 }
 
 .nav {
@@ -33,7 +34,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  gap: 1rem;
+  gap: 2rem;
+  height: 45vh;
 }
 
 h1 {
@@ -62,7 +64,7 @@ h1 {
 
 .main button {
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   background-color: black;
   color: white;
   border-radius: 5px;
@@ -83,7 +85,7 @@ button:hover {
 }
 .about {
   background-color: black;
-  color: white;
+  color: rgb(246, 246, 246);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -101,10 +103,12 @@ button:hover {
   gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
+  background-color: rgb(54, 54, 54);
+  color: rgb(205, 205, 205);
 }
 .footer a {
   text-decoration: none;
-  color: black;
+  color: rgb(205, 205, 205);
 }
 .footer a:hover {
   text-decoration: underline;
