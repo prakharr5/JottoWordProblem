@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jotto Game</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <a href="/">Home</a>
+    </div>
+    <div class="main">
+      <h1>Six unique word solver</h1>
+      <p id="guess">Next guess: {{ guess }}</p>
+      <p id="remaining">Remaining words: {{ possible_words }}</p>
+      <label for="feedback">Enter feedback (number of matching letters):</label>
+      <input type="number" id="feedback" min="0" max="3" />
+      <button onclick="sendFeedback()">Submit</button>
+      <p id="words"></p>
+    </div>
+    <script src="../static/script/sixuni.js"></script>
+  </body>
+</html>
