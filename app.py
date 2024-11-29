@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 from game.threewordSolver import threewordSolver
 from game.fourwordSolver import fourwordSolver
 from game.fivewordSolver import fivewordSolver
@@ -22,6 +22,7 @@ sixuniwordSolver = sixuniwordSolver(word_length=6)
 @app.route("/")
 def index():
     return render_template("index.html")
+
 
 @app.route("/three")
 def three():

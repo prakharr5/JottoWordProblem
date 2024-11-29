@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="nav">
-      <a href="/">Home</a>
+      <a href="/">Jotto Word Game Solver</a>
     </div>
     <div class="main">
       <h1>Six word solver</h1>
@@ -17,6 +17,7 @@
       <label for="feedback">Enter feedback (number of matching letters):</label>
       <input type="number" id="feedback" min="0" max="3" />
       <button onclick="sendFeedback()">Submit</button>
+      <div id="loading" style="display: none">Loading...</div>
       <p id="words"></p>
     </div>
     <script src="../static/script/six.js"></script>

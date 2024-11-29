@@ -4,16 +4,29 @@
   font-family: sans-serif;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 2rem;
+  background-color: black;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.nav a:hover {
+  color: #a70000;
+  transform: scale(1.1);
 }
 
+.nav a:active {
+  transform: scale(0.9);
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -27,7 +40,7 @@ h1 {
   text-transform: uppercase;
 }
 
-a {
+.main a {
   text-decoration: none;
   color: black;
   padding: 1rem 2rem;
@@ -36,7 +49,7 @@ a {
   text-transform: uppercase;
 }
 
-a:hover {
+.main a:hover {
   background-color: black;
   color: white;
 }
@@ -59,11 +72,43 @@ button:hover {
   opacity: 0.7;
 }
 
-.main input {
+#feedback {
   width: 90%;
   padding: 1rem;
 }
-
+#loading {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+.about {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.about p {
+  text-align: justify;
+}
+.footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
 @media (max-width: 768px) {
   h1 {
     font-size: 1rem;

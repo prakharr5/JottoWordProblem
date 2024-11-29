@@ -4,7 +4,22 @@ async function sendFeedback() {
     alert("Please enter a valid number!");
     return;
   }
+  const loadingElement = document.getElementById("loading");
+  loadingElement.style.display = "block"; // Show the loading spinner
 
+  try {
+    // Simulate an asynchronous request (replace with your actual logic)
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate delay
+
+    // Example of updating DOM with feedback (replace with actual response handling)
+    document.getElementById(
+      "words"
+    ).innerText = `Feedback received: ${feedback}`;
+  } catch (error) {
+    console.error("Error processing feedback:", error);
+  } finally {
+    loadingElement.style.display = "none"; // Hide the loading spinner
+  }
   const response = await fetch("/fouruni/guess", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
