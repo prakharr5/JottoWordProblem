@@ -55,3 +55,18 @@ a:hover {
 button:hover {
   opacity: 0.7;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .games {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .games {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
