@@ -33,9 +33,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 3rem;
   gap: 2rem;
-  height: 45vh;
 }
 
 h1 {
