@@ -15,7 +15,13 @@
       <p id="guess">Next guess: {{ guess }}</p>
       <p id="remaining">Remaining words: {{ possible_words }}</p>
       <label for="feedback">Enter feedback (number of matching letters):</label>
-      <input type="number" id="feedback" min="0" max="3" />
+      <input
+        type="number"
+        id="feedback"
+        placeholder="Enter feedback (0-3)"
+        min="0"
+        max="3"
+      />
       <button onclick="sendFeedback()">Submit</button>
       <div id="loading" style="display: none">Loading...</div>
       <p id="words"></p>

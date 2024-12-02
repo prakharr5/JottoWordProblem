@@ -2,7 +2,6 @@ import itertools
 import os
 from collections import defaultdict, Counter
 
-
 class threewordSolver:
     def __init__(self, word_length=3):
         self.word_length = word_length

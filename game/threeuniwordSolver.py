@@ -2,7 +2,6 @@ import itertools
 import os
 from collections import defaultdict, Counter
 
-
 class threeuniwordSolver:
     def __init__(self, word_length=3):
         self.word_length = word_length
@@ -29,9 +28,13 @@ class threeuniwordSolver:
 
     def build_graph_incremental(self, feedback):
         graph = {}
+        valid_words = set()
         for word in self.possible_words:
             if self.count_common_letters(word, self.current_guess) == feedback:
                 graph[word] = []
+                valid_words.add(word)
+        print(f"Number of words in graph after filtering: {len(graph)}")
+    
         for word in graph:
             for other_word in graph:
                 if word != other_word:
@@ -56,3 +59,4 @@ class threeuniwordSolver:
         self.possible_words = list(graph.keys())
         self.current_guess = self.select_next_guess(graph) if self.possible_words else None
         return self.possible_words, self.current_guess
+     
